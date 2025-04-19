@@ -94,13 +94,23 @@ for (const key of phoneKeys) {
     console.log(key, phone[key]);
 }
 
-// 
+// very important - should check frequently 
 const numbers = { a: 10, b: 20, c: 30, d: 40 };
-for (const number in numbers) {
-    const value = numbers[number];
-    // console.log(number, value);
-    
-    // have to try
+const values = Object.values(numbers);
 
-}
+    let sum = 0;
+    for(const value of values){
+        sum = sum + value;
+    }
+    console.log(sum);
+// or
+    let total = 0;
+    for(const number in numbers){
+        const value = numbers[number];
+        total = total + value;
+    }
+    console.log(total);
+    
+
+
 
